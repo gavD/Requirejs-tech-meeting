@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Require.js example 1: using script tags 1</title>
+        <title>Require.js example 1: using script tags blocks</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/trivial.plugin.jquery.js"></script>
-        
+        <script data-main="scripts/main" src="http://gavd.co.uk/huge-jquery.min.js"></script>
+        <script data-main="scripts/main" src="js/trivial.jquery.plugin.js"></script>
     </head>
     <body>
         <h1>Raw script includes</h1>
         
-        <div id="intro"></div>
-        
-        <script type="text/javascript" src="js/dostuff.js"></script>
+        <div id="intro">Loading...</div>
+
+        <p> Prev | <a href="example2.html">Next</a></p>
+
+        <script type="text/javascript" src="js/main-example1.js"></script>
     </body>
 </html>

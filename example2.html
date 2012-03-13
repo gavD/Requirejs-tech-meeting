@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Require.js example 2: using script tags 2</title>
+        <title>Require.js example 2: dynamically writing script tags</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script type="text/javascript" src="http://gavd.co.uk/jquery.min.js"></script>
-        
-        
     </head>
     <body>
-        <h1>Raw script includes</h1>
-        
-        <div id="intro"></div>
-        
-        <script type="text/javascript" src="js/trivial.plugin.jquery.js"></script>
-        <script type="text/javascript" src="js/dostuff.js"></script>
+        <h1>Dynamically writing script tags</h1>
+
+        <div id="intro">Loading...</div>
+
+        <p> <a href="example1.html">Prev</a> | <a href="example3.html">Next</a></p>
+
+        <script type="text/javascript">
+            var head = document.getElementsByTagName('head')[0];
+            var scripts = [
+                'http://gavd.co.uk/huge-jquery.min.js',
+                'js/trivial.jquery.plugin.js',
+                'js/main-example2.js'
+            ];
+
+            for(var i = 0; i < scripts.length; i++) {
+                var script = document.createElement('script');
+
+                script.src = scripts[i];
+                head.appendChild(script);
+            }
+        </script>
     </body>
 </html>
-
-
-<!-- using require.js, we only ever have one script tag -->
