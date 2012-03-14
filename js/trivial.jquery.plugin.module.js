@@ -1,7 +1,7 @@
 define(
     'trivial',
     ['jquery'],
-    function($) {
+    function() {
 
         /**
          * Trivial jQuery plugin for demonstrating require.js

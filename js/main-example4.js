@@ -1,5 +1,6 @@
 require([
-    'js/trivial.jquery.plugin.module.js'
+    'jquery',
+    'trivial.jquery.plugin.module'
 ], function() {
     $('#intro').text($.trivial('Hey this worked!'));
 });
